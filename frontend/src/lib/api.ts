@@ -26,7 +26,7 @@ export async function fetchProducts(params: FilterParams) {
     const res = await fetch(
         `${process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:4000'}/products?${query.toString()}`,
         {
-            cache: 'no-store',
+            next: { revalidate: 86400 },
         }
     );
 
