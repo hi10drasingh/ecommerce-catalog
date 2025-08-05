@@ -1,10 +1,9 @@
 'use client';
 
-import { useEffect, useState, useTransition } from 'react';
+import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 export default function LoadingOverlay() {
-    const [loading, startTransition] = useTransition();
     const searchParams = useSearchParams();
     const [isLoading, setIsLoading] = useState(false);
 
@@ -12,7 +11,7 @@ export default function LoadingOverlay() {
         setIsLoading(true);
         const timer = setTimeout(() => setIsLoading(false), 500); // Small delay to smooth UX
         return () => clearTimeout(timer);
-    }, [searchParams.toString()]); // Triggers on filter change
+    }, [searchParams]); // Triggers on filter change
 
     if (!isLoading) return null;
 
