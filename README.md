@@ -34,7 +34,6 @@ A full-stack product listing platform featuring faceted search, filters, paginat
 - **Next.js 15 (App Router)**
 - **TypeScript**
 - **Tailwind CSS**
-- **Headless UI**
 - `next/image`, `useSearchParams`, `useRouter`
 
 ### Backend
