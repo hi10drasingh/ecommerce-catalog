@@ -40,7 +40,7 @@ A full-stack product listing platform featuring faceted search, filters, paginat
 ### Backend
 - **Node.js** with **Express.js**
 - **Prisma ORM**
-- **SQLite** (easy local setup) or **PostgreSQL** (production ready)
+- **SQLite** (easy local setup)
 - RESTful API endpoints
 
 ---
